@@ -1,0 +1,186 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.blog.Splash"
+    android:background="@color/white"
+    android:id="@+id/splashMainLayout"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".8"
+
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3"
+
+            android:padding="50dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pager"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight=".45">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="15dp"
+                android:id="@+id/relativeLayout"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right|top"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="30dp">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    android:layout_weight="0.5"
+
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:id="@+id/username"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/colorPrimary"
+                        android:hint="Username"
+                        android:textColorHint="@color/colorPrimaryLight"
+                        android:textCursorDrawable="@null"
+                        android:singleLine="true"
+                        android:textSize="15dp"
+                        style="@style/Widget.AppCompat.EditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_password1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="0.5"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    android:layout_marginTop="10dp">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:inputType="textPassword"
+                        android:ems="10"
+                        android:id="@+id/password"
+                        android:textCursorDrawable="@null"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimaryLight"
+                        style="@style/Widget.AppCompat.EditText"
+                        android:singleLine="true"
+                        android:textSize="15dp"
+                        android:hint="Password" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp">
+
+                <android.support.v7.widget.AppCompatButton
+
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:text="Sign In"
+                    android:id="@+id/login"
+                    android:textAllCaps="false"
+                    android:background="@drawable/edit_ripple"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="18dp" />
+
+                <android.support.v7.widget.AppCompatButton
+
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:text="Frogot Password?"
+                    android:id="@+id/forget"
+                    android:textAllCaps="false"
+                    android:background="@color/transparent"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:textColor="@color/colorPrimary"
+
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/login"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/facebook"
+                    android:background="@drawable/fb_bg"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/view"
+                    android:layout_marginRight="25dp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:background="@color/gray_light"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/view" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/google"
+
+                    android:background="@drawable/gp_bg"
+                    android:layout_marginLeft="25dp"
+                    android:layout_alignTop="@+id/facebook"
+                    android:layout_toEndOf="@+id/view"
+                    android:layout_marginStart="38dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
